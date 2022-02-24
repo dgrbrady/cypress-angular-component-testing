@@ -8,7 +8,8 @@
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "ct:app": "npx cypress open-ct -C apps/app/cypress.json"
+    "ct:app": "npx cypress open-ct -C apps/app/cypress.json",
+    "ct:ui": "npx cypress open-ct -C libs/ui/cypress.json"
   },
   "private": true,
   "dependencies": {
