@@ -1,12 +1,16 @@
 import * as webpack from 'webpack';
 import * as path from 'path';
 
+const projectRoot = path.join(__dirname, '../..');
 module.exports = {
   mode: 'development',
   devtool: 'inline-source-map',
   resolve: {
     extensions: ['.ts', '.js'],
     modules: [path.join(__dirname, '../../src'), 'node_modules'],
+    alias: {
+      '@cypress-angular-component-testing/ui': path.join(projectRoot, 'libs/ui/src')
+    }
   },
   module: {
     rules: [
